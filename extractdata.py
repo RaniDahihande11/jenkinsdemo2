@@ -1,1 +1,1 @@
-print('**** extract data ****')
+print('Extract data')
