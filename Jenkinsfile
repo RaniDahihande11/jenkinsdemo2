@@ -6,7 +6,7 @@ pipeline{
         // create variable for use path easy way
     }
 
-    trigger{
+    triggers{
         cron("*/2 * * * *") // for every 2 min
     }
    
