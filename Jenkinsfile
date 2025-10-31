@@ -4,6 +4,9 @@ pipeline{
         PYTHON = 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
         // create variable for use path easy way
     }
+    steps{
+
+   
     stages{
         stage('Checkout Data'){
             checkout scm
@@ -28,4 +31,5 @@ pipeline{
 
         }
     }
+     }
 }
