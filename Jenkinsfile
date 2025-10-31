@@ -1,5 +1,6 @@
 pipeline{
     agent any
+
     environment{
         PYTHON = 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
         // create variable for use path easy way
@@ -17,25 +18,24 @@ pipeline{
         }
          stage('Extract Data'){
             steps{
-            bat "${env.PYTHON}  extractdata.py"
+             bat "${env.PYTHON} extractdata.py"
         }
          }
 
     }
       
     post{
-        success{
-            echo "success.."
-
+         always {
+            echo 'Pipeline completed.'
         }
-        failure{
-            echo "failure..."
-
+       success {
+            echo 'Pipeline completed.'
         }
-        always{
-            acho 'always...'
-
+        failure {
+            echo 'Pipeline failed.'
         }
+
     }
+
    
 }
